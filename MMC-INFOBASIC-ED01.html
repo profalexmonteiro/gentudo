@@ -213,7 +213,7 @@ Clique em Inserir e escolha os elementos desejados nas diferentes galerias. Tema
 
         <div class="questao">          
           <label for="textarea"><strong>Questão  3</strong><br>Qual a funcao do processador?</label><br/>
-          <span id=questao2 class="textarea" role="textbox" contenteditable></span></p>
+          <span id=questao3 class="textarea" role="textbox" contenteditable></span></p>
         </div>
 
         <div class="questao">
@@ -414,29 +414,45 @@ if (typeof module !== 'undefined') {
                        
 
    function dataED() {        
-    document.open();
+    
     document.write(
-                    "<strong>Curso:</strong>" + ediridigo[curso] + 
-                    "<br><strong>Turma(s):</strong>" + edirigido[turma] +
-                    "<br><strong>Ano:</strong>" + edirigido[ano] +
-                    "<br><strong>Disciplina:</strong>" + edirigido[disciplina] +
-                    "<br><strong>Etapa:</strong> " + edirigido[etapa] +
-                    "<br><strong>Estudo dirigido:</strong>" + edirigido[edirigido]
+                    "<strong>Curso:</strong>" + ediridigo["curso"] + 
+                    "<br><strong>Turma(s):</strong>" + edirigido["turma"] +
+                    "<br><strong>Ano:</strong>" + edirigido["ano"] +
+                    "<br><strong>Disciplina:</strong>" + edirigido["disciplina"] +
+                    "<br><strong>Etapa:</strong> " + edirigido["etapa"] +
+                    "<br><strong>Estudo dirigido:</strong>" + edirigido["edirigido"]
           );
-    document.close();
+    
    }
 
-function salvar() {
-      let texto = JSON.stringify(edirigido)  + document.getElementById("Atividade").innerHTML;
-      let questoes = document.getElementById("questionario").querySelectorAll("questao");
+ function dataAtualFormatada(){
+    var data = new Date(),
+        dia  = data.getDate().toString(),
+        diaF = (dia.length == 1) ? '0'+dia : dia,
+        mes  = (data.getMonth()+1).toString(), //+1 pois no getMonth Janeiro começa com zero.
+        mesF = (mes.length == 1) ? '0'+mes : mes,
+        anoF = data.getFullYear();
+    return diaF+"/"+mesF+"/"+anoF;
+}
 
-      for(i= 0 ; questoes.length; i++){
-            console.log(questoes[í].nodeValue);
-      }
+function salvar() {
+      let today = dataAtualFormatada();   
+      let  nameFile = edirigido["turma"] + "-" + document.getElementById("matricula").value + "-" + today + ".json";
+      let questoes = document.getElementsByClassName("questao");      
+
+      edirigido["data"] = today;
+                
+       for(i= 0 ; i < questoes.length; i++){
+             edirigido[questoes[i].childNodes[4].id] = questoes[i].childNodes[4].innerText;
+       }
+
+       let texto = JSON.stringify(edirigido);
+       console.log(edirigido);
 
       let titulo = "teste";
       let blob = new Blob([texto], { type: "text/plain;charset=utf-8" });
-      saveAs(blob, titulo + ".txt");
+      saveAs(blob,nameFile);
    }
 
 
