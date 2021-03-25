@@ -1,0 +1,722 @@
+
+<html >
+    <head> 
+        <meta charset="utf-8"/>
+        <title>Informática Básica - Etapa 01 - Estudo Dirigido 01</title>
+
+        <script>
+          var edirigido= {curso:"Técnico em Informática",
+                              turma: "INFBAS001",
+                              disciplina: "Infomática Básica",
+                              ano: 1,
+                              modalidade: "subsequente",
+                              etapa: 1,
+                              edirigido: 1                              
+                              };
+                                    
+            function dataED() {          				
+                  document.write("<strong>Curso: </strong>" + edirigido["curso"] +
+                      "<br><strong>Turma(s): </strong>" + edirigido["turma"] +                        
+                      "<br><strong>Ano: </strong>" + edirigido["ano"] +
+                      "<br><strong>Disciplina: </strong>" + edirigido["disciplina"] +
+                      "<br><strong>Etapa: </strong>" + edirigido["etapa"] +
+                      "<br><strong>Estudo dirigido: </strong>" + edirigido["edirigido"]             
+                      );
+                      
+            }
+          
+          </script>
+    </head>
+
+   
+    <style>
+     
+     body{
+        margin: 10%;
+      }
+
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+
+      .titulo{
+            font-size: 1.8em;                 
+            color: #538135;            
+            margin: 0;                       
+            border-radius: 20px;                        
+            background: #E2F0D9;            
+          }
+
+      .subtitulo{
+            margin: 0;
+            font-size: 1.5em;     
+            color: #538135;
+        }
+
+        h2{
+            color: #538135;
+        }
+     
+      
+      
+      @media print {
+        
+          html, body {
+            background-color: white;
+            margin: 0;
+            
+          }
+
+          .logo {
+            margin-left: 10%; 
+            padding-top: 10%;
+          }
+
+          .titulo{
+            font-size: 2.0em;
+            display: flex;
+            align-items: center;
+            margin: auto;                                    
+            width: 80%;                                            
+            height: 150px;
+          }
+
+          .vertical-center {
+              margin: 0;
+              position: absolute;
+              text-align: center;
+              width: 100%;
+              top: 50%;
+              left: 50%;
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);              
+            }
+
+          .page-break{
+            page-break-before: always;          
+          }    
+                  
+
+          p {                        
+            text-align: justify;
+          }
+          
+
+          #first{
+            height: 100%;   
+            width:  100%;
+            margin: 0px;                    
+            position: relative;        
+            background-image: radial-gradient(circle, rgb(185, 230, 185),rgb(108, 173, 88));
+            -webkit-print-color-adjust: exact; 
+          }   
+
+          .pages {
+              margin: 10%;
+          }
+        
+        }
+
+      .center{
+        text-align: center;
+      }
+
+      .marginleft{
+        margin-left: 10%;
+      }
+
+      .input,
+      .textarea {
+          border: 1px solid #ccc;          
+          /* padding: 1px 6px; */
+      }
+      
+      .input {     
+        position: absolute;          
+        min-width: 250px;       
+        float: right;
+        clear: both;                      
+      }
+
+      .matricula {
+              min-width: 200px;                                 
+        } 
+
+      .textarea {
+          display: block;      
+          width: 100%;    
+          overflow: hidden;         
+          min-height: 40px;
+          line-height: 20px;             
+      }
+
+        .container {
+            width: 100%;            
+            background: rgb(255, 0, 0); 
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center
+        }
+
+        .box {
+            width: 90%;
+            /* height: x; */
+            background: rgb(12, 151, 65);
+            margin:  20;
+        }
+
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+          }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+          background-color: inherit;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: 0.3s;
+          font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+          background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+          background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+          display: none;
+          padding: 6px 12px;
+          border: 1px solid #ccc;
+          border-top: none;
+        }
+
+        .button {
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+
+          .button1 {
+                background-color: #ec4e10;                
+          } 
+
+          .button2 {
+                background-color: #4CAF50;                
+          } 
+
+          table {
+            width:80%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+          }
+          th, td {
+            padding: 15px;
+            text-align: center;
+          }
+          #t01 tr:nth-child(even) {
+            background-color: #FBE4D5;
+          }
+
+          #t01 tr:nth-child(odd) {
+          background-color: #fff;
+          }
+          #t01 th {
+            background-color: white;
+            color: black ;
+          }
+     
+    </style>
+<body id="body">
+
+  
+      <div class="page-break" id="first">
+        
+        <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="101.4294mm" height="19.58842mm" version="1.0" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+        viewBox="0 0 69633.49 13447.87"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+         <defs>
+          <font id="FontID1" horiz-adv-x="632" font-variant="normal" style="fill-rule:nonzero" font-weight="400">
+          <font-face 
+            font-family="Open Sans">
+            <font-face-src>
+              <font-face-name name="Open Sans"/>
+            </font-face-src>
+          </font-face>
+           <missing-glyph><path d="M0 0z"/></missing-glyph>
+           <glyph unicode="A" horiz-adv-x="632" d="M547.001 0l-88.8361 226.998 -286.333 0 -87.8305 -226.998 -84.002 0 282.332 716.999 69.8362 0 280.834 -716.999 -86.0004 0zm-114.669 302.001l-83.1646 221.167c-10.6697,27.9992 -21.8357,62.3346 -33.17,102.998 -7.1649,-31.163 -17.3296,-65.4984 -30.8307,-102.998l-84.002 -221.167 231.167 0z"/>
+           <glyph unicode="a" horiz-adv-x="556" d="M414.999 0l-16.1642 76.1681 -4.00112 0c-26.6655,-33.5024 -53.167,-56.3351 -79.6685,-68.3342 -26.6655,-11.835 -59.6629,-17.8346 -99.3331,-17.8346 -53.167,0 -94.6673,13.6694 -124.833,40.9996 -29.9976,27.5029 -45.1648,66.3358 -45.1648,116.999 0,108.168 86.5011,164.836 259.167,170.002l90.8345 2.99976 0 33.1657c0,41.8327 -9.0036,72.8316 -27.0022,92.8329 -18.1669,20.0013 -46.9992,30.0019 -86.6651,30.0019 -44.6684,0 -94.9997,-13.6694 -151.335,-40.9996l-24.8311 61.998c26.3332,14.3341 55.1654,25.6685 86.4968,33.8347 31.4997,8.16626 63.0036,12.1674 94.5033,12.1674 63.8324,0 111,-14.1701 141.831,-42.5017 30.835,-28.3316 46.1661,-73.6647 46.1661,-136.168l0 -365.332 -59.9996 0zm-183.167 56.9998c50.4996,0 90.1698,13.8334 118.834,41.5003 28.8323,27.6669 43.3347,66.3314 43.3347,116.166l0 48.3329 -81.1662 -3.50044c-64.333,-2.16674 -110.836,-12.1674 -139.336,-29.9976 -28.4999,-17.6662 -42.6657,-45.3331 -42.6657,-82.6683 0,-29.3329 8.83527,-51.665 26.6655,-66.8321 17.6662,-15.3355 42.5017,-23.0011 74.3337,-23.0011z"/>
+           <glyph unicode="m" horiz-adv-x="930" d="M767.831 0l0 348.167c0,42.5017 -8.99929,74.502 -27.3302,95.8327 -18.1669,21.335 -46.5028,32.0003 -84.835,32.0003 -50.4996,0 -87.6664,-14.4981 -111.833,-43.4987 -23.9981,-29.0006 -36.1655,-73.5007 -36.1655,-133.669l0 -298.832 -81.0022 0 0 348.167c0,42.5017 -9.16762,74.502 -27.3302,95.8327 -18.1669,21.335 -46.6668,32.0003 -85.504,32.0003 -50.6636,0 -87.8305,-15.1671 -111.496,-45.6655 -23.5017,-30.3343 -35.3368,-80.3332 -35.3368,-149.669l0 -280.666 -80.9979 0 0 534.998 65.8351 0 13.1644 -73 4.00112 0c15.1671,26.0008 36.8302,46.3345 64.6654,61.0009 27.8352,14.6665 58.9982,21.9997 93.502,21.9997 83.497,0 138.33,-30.33 163.999,-90.8302l3.83279 0c16.0002,27.9992 39.1652,50.1629 69.3355,66.4998 30.33,16.1642 64.8294,24.3304 103.498,24.3304 60.5002,0 105.833,-15.4995 135.999,-46.6668 30.0019,-30.999 45.1691,-80.8339 45.1691,-149.164l0 -349.168 -81.1706 0z"/>
+           <glyph unicode="n" horiz-adv-x="613" d="M452.334 0l0 346.168c0,43.667 -9.83232,76.1638 -29.8336,97.6671 -19.833,21.499 -51.0003,32.1644 -93.3336,32.1644 -55.9984,0 -96.9981,-15.1671 -122.999,-45.3331 -26.1692,-30.3343 -39.1696,-80.3332 -39.1696,-150.001l0 -280.666 -80.9979 0 0 534.998 65.8351 0 13.1644 -73 4.00112 0c16.6649,26.3375 39.8343,46.8351 69.8319,61.3333 30.0019,14.5024 63.3317,21.6674 100.166,21.6674 64.5014,0 113.003,-15.4995 145.499,-46.6668 32.6694,-30.999 48.8335,-80.8339 48.8335,-149.164l0 -349.168 -80.9979 0z"/>
+           <glyph unicode="o" horiz-adv-x="604" d="M547.834 268.002c0,-87.3341 -21.9997,-155.5 -65.8351,-204.502 -43.9994,-49.0019 -104.668,-73.5007 -182.165,-73.5007 -47.8322,0 -90.3339,11.166 -127.501,33.6664 -36.9985,22.5004 -65.6667,54.8331 -85.8321,96.8341 -20.3336,42.001 -30.3343,91.1669 -30.3343,147.502 0,87.3298 21.8314,155.332 65.4984,203.997 43.503,48.6695 104.167,73 181.501,73 75.0027,0 134.333,-24.8311 178.501,-74.666 44.1677,-49.8306 66.1674,-117.332 66.1674,-202.331zm-407.666 0c0,-68.3342 13.6651,-120.5 40.9996,-156.337 27.3302,-35.8331 67.4968,-53.6634 120.664,-53.6634 53.003,0 93.3336,17.8302 120.836,53.4994 27.4985,35.6648 41.1636,87.8348 41.1636,156.501 0,67.9975 -13.6651,119.667 -41.1636,154.999 -27.5029,35.3325 -68.1701,52.9987 -121.834,52.9987 -53.167,0 -93.1696,-17.3339 -120.167,-52.1657 -27.0022,-34.8361 -40.499,-86.8334 -40.499,-155.832z"/>
+           <glyph unicode="s" horiz-adv-x="477" d="M431.167 145.832c0,-49.8306 -18.6676,-88.3311 -55.6661,-115.333 -37.1668,-26.9979 -89.1685,-40.499 -156.333,-40.499 -70.8332,0 -126.167,11.166 -166.001,33.6664l0 75.335c25.8325,-13.0004 53.331,-23.3334 82.8323,-30.835 29.5013,-7.49725 57.8328,-11.166 85.1674,-11.166 42.3333,0 74.8344,6.83255 97.6671,20.3336 22.8327,13.5011 34.1671,33.9987 34.1671,61.6656 0,20.8343 -8.99929,38.6689 -27.1662,53.4994 -18.0029,14.8348 -53.167,32.337 -105.669,52.5023 -49.8306,18.6676 -85.1674,34.8318 -106.166,48.6652 -20.9983,13.8334 -36.6662,29.5013 -46.8308,47.1675 -10.3373,17.4979 -15.3355,38.5006 -15.3355,62.9993 0,43.667 17.6662,78.0025 53.167,103.334 35.5008,25.1678 84.166,37.8315 146,37.8315 57.5005,0 113.831,-11.6667 168.833,-35.1641l-28.8323 -65.9991c-53.6677,22.1637 -102.333,33.1657 -145.836,33.1657 -38.4962,0 -67.4968,-5.99953 -86.9974,-18.0029 -19.5006,-12.1631 -29.3329,-28.6639 -29.3329,-49.8306 0,-14.3341 3.66446,-26.5015 10.9977,-36.6662 7.33323,-10.0006 19.1683,-19.6689 35.5008,-28.8366 16.1685,-8.99929 47.4998,-22.332 93.666,-39.4976 63.5,-23.1694 106.334,-46.4985 128.666,-69.8319 22.3364,-23.5017 33.5024,-53.003 33.5024,-88.5038z"/>
+           <glyph unicode="z" horiz-adv-x="467" d="M428.5 0l-388.502 0 0 55.1654 292.168 416.833 -274.001 0 0 62.9993 363.001 0 0 -62.9993 -288.335 -408.999 295.669 0 0 -62.9993z"/>
+          </font>
+          <font id="FontID0" horiz-adv-x="689" font-variant="normal" style="fill-rule:nonzero" font-style="normal" font-weight="700">
+          <font-face 
+            font-family="Open Sans">
+            <font-face-src>
+              <font-face-name name="Open Sans Bold"/>
+            </font-face-src>
+          </font-face>
+           <missing-glyph><path d="M0 0z"/></missing-glyph>
+           <glyph unicode="," horiz-adv-x="290" d="M224.169 104.834c-17.0017,-65.8325 -45.6698,-143.668 -86.0043,-233.834l-107.331 0c21.1679,86.5001 37.501,168.165 49.1674,245l136.832 0 7.33645 -11.1661z"/>
+           <glyph unicode="A" horiz-adv-x="689" d="M527.001 0l-51.8327 169.998 -260.337 0 -51.6645 -169.998 -163.167 0 252 716.998 184.999 0 253.001 -716.998 -162.998 0zm-88.0011 297.001c-47.8348,153.997 -74.8336,241.166 -80.8329,261.333 -5.99924,20.1673 -10.3338,36.1638 -12.8354,47.8302 -10.8296,-41.6627 -41.6672,-144.664 -92.3311,-309.164l185.999 0z"/>
+           <glyph unicode="C" horiz-adv-x="637" d="M392.998 598.001c-56.9996,0 -101,-21.3317 -132.334,-64.1678 -31.1651,-42.8316 -46.8296,-102.501 -46.8296,-178.999 0,-159.169 59.665,-238.833 179.163,-238.833 49.9998,0 110.834,12.4988 182.001,37.6647l0 -126.998c-58.5006,-24.5018 -124.001,-36.6686 -196.165,-36.6686 -103.834,0 -183.17,31.5017 -238.169,94.5006 -54.9984,62.9989 -82.4976,153.502 -82.4976,271.335 0,74.165 13.4994,139.165 40.4983,195 26.9989,55.8307 65.8325,98.6669 116.333,128.499 50.6684,29.8325 110.001,44.6646 177.999,44.6646 69.3347,0 138.833,-16.8334 208.836,-50.3318l-48.8354 -123c-26.6668,12.6671 -53.4974,23.665 -80.5009,33.1664 -26.9989,9.50146 -53.4974,14.168 -79.5002,14.168z"/>
+           <glyph unicode="D" horiz-adv-x="740" d="M681.835 363.834c0,-117.502 -33.3347,-207.499 -100.168,-270.002 -67.0014,-62.4986 -163.499,-93.832 -289.833,-93.832l-202 0 0 714.001 224.001 0c116.501,0 206.999,-30.8331 271.499,-92.3356 64.3316,-61.4979 96.5019,-147.498 96.5019,-257.831zm-157.167 -3.83424c0,153.333 -67.67,230 -203.001,230l-80.5009 0 0 -464.998 65.0002 0c145.669,0 218.502,78.3313 218.502,234.998z"/>
+           <glyph unicode="E" horiz-adv-x="559" d="M500.998 0l-411.164 0 0 714.001 411.164 0 0 -124.001 -259.832 0 0 -156.999 241.666 0 0 -124.001 -241.666 0 0 -183.998 259.832 0 0 -125.002z"/>
+           <glyph unicode="F" horiz-adv-x="548" d="M238.833 0l-148.999 0 0 714.001 409.331 0 0 -124.001 -260.333 0 0 -183.998 242.335 0 0 -124.001 -242.335 0 0 -282.001z"/>
+           <glyph unicode="G" horiz-adv-x="724" d="M360.833 400.999l283.165 0 0 -370.498c-45.9972,-15.0004 -89.1654,-25.5025 -129.664,-31.5017 -40.5029,-5.99924 -82.0018,-9.00114 -124.333,-9.00114 -107.668,0 -189.834,31.67 -246.669,95.0009 -56.8314,63.3355 -85.1629,154.166 -85.1629,272.668 0,115.332 32.8298,205.166 98.8306,269.666 65.8325,64.4998 157.167,96.6656 274,96.6656 73.3327,0 144,-14.6638 212.002,-44.0005l-50.3363 -120.999c-51.9965,26.0028 -106.167,39.0019 -162.498,39.0019 -65.5005,0 -117.834,-22.0003 -157.167,-66.0008 -39.4977,-43.8322 -59.1647,-103.001 -59.1647,-177.166 0,-77.499 15.8327,-136.668 47.6665,-177.499 31.6655,-40.8349 77.831,-61.3342 138.333,-61.3342 31.4972,0 63.6675,3.33392 96.1653,9.83349l0 149.167 -135.167 0 0 125.998z"/>
+           <glyph unicode="I" horiz-adv-x="331" d="M89.834 0l0 714.001 151.332 0 0 -714.001 -151.332 0z"/>
+           <glyph unicode="L" horiz-adv-x="564" d="M89.834 0l0 714.001 151.332 0 0 -588.999 289.669 0 0 -125.002 -441.001 0z"/>
+           <glyph unicode="N" horiz-adv-x="813" d="M723.166 0l-192.331 0 -310.669 540.169 -4.33456 0c6.16753,-95.5012 9.33317,-163.503 9.33317,-204.17l0 -335.999 -135.331 0 0 714.001 190.998 0 310 -534.833 3.50221 0c-5.00316,92.8314 -7.33645,158.5 -7.33645,196.833l0 338 136.168 0 0 -714.001z"/>
+           <glyph unicode="O" horiz-adv-x="795" d="M737.834 357.835c0,-118.334 -29.1684,-209.169 -87.8328,-272.668 -58.6689,-63.4992 -142.667,-95.1692 -252,-95.1692 -109.333,0 -193.336,31.67 -252,95.1692 -58.6689,63.4992 -87.8328,154.666 -87.8328,273.5 0,118.834 29.3322,209.664 88.1648,272.331 58.6689,62.6669 142.999,94.0003 252.669,94.0003 109.665,0 193.663,-31.4972 251.664,-94.6644 58.1686,-63.1672 87.1687,-154.002 87.1687,-272.499zm-521.002 0c0,-79.8368 15.1687,-139.834 45.3332,-180.337 30.3328,-40.33 75.666,-60.4973 135.836,-60.4973 120.831,0 181.164,80.3326 181.164,240.834 0,160.833 -59.997,241.166 -180.164,241.166 -60.3336,0 -105.667,-20.3356 -136.336,-60.8339 -30.5011,-40.5029 -45.8335,-100.668 -45.8335,-180.332z"/>
+           <glyph unicode="R" horiz-adv-x="660" d="M241.166 397.001l48.8354 0c47.8302,0 83.1662,8.00051 105.831,23.997 22.8326,15.8373 34.167,41.0032 34.167,75.1702 0,33.8305 -11.6665,58.0003 -34.8311,72.3321 -23.3329,14.3318 -59.3329,21.4999 -108.168,21.4999l-45.8335 0 0 -192.999zm0 -123l0 -274 -151.332 0 0 714.001 208 0c96.9976,0 168.666,-17.6657 215.168,-53.0017 46.6658,-35.3314 69.8305,-89.0017 69.8305,-160.833 0,-41.9993 -11.4982,-79.3319 -34.6674,-112.166 -22.9963,-32.6661 -55.6624,-58.3323 -97.9983,-76.8349 107.336,-160.497 177.335,-264.331 209.833,-311.165l-167.997 0 -170.335 274 -80.5009 0z"/>
+           <glyph unicode="S" horiz-adv-x="550" d="M511.5 197.998c0,-64.4998 -23.3329,-115.164 -69.6667,-152.333 -46.3338,-37.1644 -111.002,-55.667 -193.668,-55.667 -76.1663,0 -143.668,14.3363 -202.164,42.9999l0 140.671c48.1668,-21.4999 88.9971,-36.6686 122.332,-45.5015 33.3347,-8.83285 63.8312,-13.1674 91.4987,-13.1674 33.3347,0 58.8326,6.33127 76.5029,18.9984 17.8294,12.6671 26.6668,31.67 26.6668,56.6676 0,13.9998 -3.83424,26.4986 -11.671,37.3327 -7.83222,11.0024 -19.3304,21.4999 -34.4991,31.5017 -15.1641,10.1655 -45.9972,26.3348 -92.4994,48.3351 -43.664,20.6631 -76.4983,40.33 -98.3349,59.1647 -21.832,18.8346 -39.1657,40.8349 -52.1648,66.0008 -13.1674,24.9976 -19.667,54.3343 -19.667,87.8328 0,63.1672 21.4999,112.835 64.3361,148.999 42.8316,36.1683 101.996,54.166 177.499,54.166 37.1644,0 72.5004,-4.33001 106.331,-13.1629 33.6667,-8.8374 68.8344,-21.1679 105.667,-37.1689l-48.8309 -117.665c-38.1696,15.6644 -69.6667,26.4986 -94.5006,32.6661 -25.0022,6.16753 -49.4995,9.33317 -73.501,9.33317 -28.6636,0 -50.6638,-6.66785 -66.0008,-19.999 -15.3324,-13.3357 -22.9963,-30.8331 -22.9963,-52.3331 0,-13.3357 3.16564,-25.0022 9.33317,-34.8356 6.16298,-10.0018 15.9965,-19.4987 29.5005,-28.8319 13.4994,-9.33317 45.4969,-26.0028 95.997,-49.9998 66.8331,-32.002 112.503,-63.9995 137.332,-96.0016 24.6701,-32.1658 37.1689,-71.3314 37.1689,-118.002z"/>
+           <glyph unicode="T" horiz-adv-x="579" d="M365.167 0l-151.332 0 0 587.999 -193.836 0 0 126.002 539 0 0 -126.002 -193.832 0 0 -587.999z"/>
+           <glyph unicode="U" horiz-adv-x="755" d="M671.001 714.001l0 -462.169c0,-52.6651 -11.8348,-98.9989 -35.336,-138.665 -23.665,-39.8343 -57.6637,-70.1671 -102.333,-91.335 -44.6646,-21.1634 -97.3342,-31.8337 -158.332,-31.8337 -91.667,0 -162.998,23.5012 -213.835,70.6674 -50.8321,47.0024 -76.1663,111.334 -76.1663,193.168l0 460.168 150.836 0 0 -437.167c0,-55.1667 11.1661,-95.5012 33.1664,-121.167 22.164,-25.8345 58.8326,-38.6653 109.997,-38.6653 49.4995,0 85.3357,12.9991 107.668,38.8336 22.3323,25.83 33.4984,66.4966 33.4984,121.832l0 436.335 150.836 0z"/>
+           <glyph unicode="Ã" horiz-adv-x="689" d="M527.001 0l-51.8327 169.998 -260.337 0 -51.6645 -169.998 -163.167 0 252 716.998 184.999 0 253.001 -716.998 -162.998 0zm-88.0011 297.001c-47.8348,153.997 -74.8336,241.166 -80.8329,261.333 -5.99924,20.1673 -10.3338,36.1638 -12.8354,47.8302 -10.8296,-41.6627 -41.6672,-144.664 -92.3311,-309.164l185.999 0zm-173.833 525.332c-10.1655,0 -19.8353,-4.33456 -29.0001,-12.9991 -9.33317,-8.50083 -16.1693,-21.6682 -20.3356,-39.3339l-72.6641 0c3.49766,47.1662 16.9971,84.1668 40.1663,111.002 23.3329,26.6623 54.166,39.998 92.4994,39.998 13.4994,0 26.4986,-2.66532 39.3339,-8.00051 12.8308,-5.49893 25.6662,-11.3344 38.165,-17.6657 12.4988,-6.33582 24.8339,-12.1668 36.8324,-17.3337 12.003,-5.33519 24.0015,-7.83222 35.668,-7.83222 10.0018,0 19.8353,4.16627 29.0001,12.6671 9.33317,8.49628 16.001,21.4999 20.3356,39.1657l72.6641 0c-3.49766,-47.1662 -17.1654,-84.1668 -40.6666,-111.002 -23.665,-26.6668 -54.3343,-39.998 -92.1673,-39.998 -13.3312,0 -26.3303,2.66532 -39.1657,8.00051 -12.9991,5.49893 -25.6662,11.3299 -38.165,17.6657 -12.5034,6.33127 -24.8339,12.3351 -36.8324,17.6657 -12.003,5.33519 -24.0015,8.00051 -35.668,8.00051z"/>
+           <glyph unicode="Ç" horiz-adv-x="637" d="M392.998 598.001c-56.9996,0 -101,-21.3317 -132.334,-64.1678 -31.1651,-42.8316 -46.8296,-102.501 -46.8296,-178.999 0,-159.169 59.665,-238.833 179.163,-238.833 49.9998,0 110.834,12.4988 182.001,37.6647l0 -126.998c-58.5006,-24.5018 -124.001,-36.6686 -196.165,-36.6686 -103.834,0 -183.17,31.5017 -238.169,94.5006 -54.9984,62.9989 -82.4976,153.502 -82.4976,271.335 0,74.165 13.4994,139.165 40.4983,195 26.9989,55.8307 65.8325,98.6669 116.333,128.499 50.6684,29.8325 110.001,44.6646 177.999,44.6646 69.3347,0 138.833,-16.8334 208.836,-50.3318l-48.8354 -123c-26.6668,12.6671 -53.4974,23.665 -80.5009,33.1664 -26.9989,9.50146 -53.4974,14.168 -79.5002,14.168zm75.0019 -720.169c0,-41.4989 -12.1668,-71.4997 -36.8324,-89.9978 -24.5018,-18.5026 -62.5031,-27.8358 -113.999,-27.8358 -25.3342,0 -49.1674,3.50221 -71.336,10.1701l0 82.1656c8.83285,-2.33329 20.6676,-4.66658 35.4997,-6.83614 14.8321,-2.33329 26.3348,-3.49766 34.3353,-3.49766 23.5012,0 35.1677,10.1655 35.1677,30.3328 0,26.8351 -27.0034,44.5008 -81.0012,52.6651l38.0013 75.0019 94.3323 0 -13.1674 -30.0008c24.0015,-7.83222 43.3319,-19.8307 57.5,-36.332 14.3318,-16.333 21.4999,-34.9994 21.4999,-55.8353z"/>
+           <glyph unicode="Ê" horiz-adv-x="559" d="M500.998 0l-411.164 0 0 714.001 411.164 0 0 -124.001 -259.832 0 0 -156.999 241.666 0 0 -124.001 -241.666 0 0 -183.998 259.832 0 0 -125.002zm-89.9978 771.001c-51.0004,30.1645 -89.1654,58.8326 -114.168,85.8315 -25.4979,-26.3303 -62.6669,-54.9984 -111.834,-85.8315l-99.1672 0 0 13.1674c61.5025,61.4979 103.17,110.333 125.002,146.834l174.333 0c10.1655,-16.8334 27.6675,-39.8343 52.5014,-69.0027 24.8339,-29.1639 48.9991,-54.9984 72.5004,-77.831l0 -13.1674 -99.1672 0z"/>
+          </font>
+          <style type="text/css">
+           <![CDATA[
+            @font-face { font-family:"Open Sans";font-variant:normal;font-weight:normal;src:url("#FontID1") format(svg)}
+            @font-face { font-family:"Open Sans";font-variant:normal;font-style:normal;font-weight:bold;src:url("#FontID0") format(svg)}
+            .fil3 {fill:#281D15}
+            .fil0 {fill:#2A2522}
+            .fil1 {fill:#359830;fill-rule:nonzero}
+            .fil2 {fill:#C90C0F;fill-rule:nonzero}
+            .fnt1 {font-weight:bold;font-size:540.77px;font-family:'Open Sans'}
+            .fnt0 {font-weight:bold;font-size:3018.79px;font-family:'Open Sans'}
+            .fnt2 {font-weight:normal;font-size:3181.13px;font-family:'Open Sans'}
+           ]]>
+          </style>
+         </defs>
+         <g id="Camada_x0020_1">
+          <metadata id="CorelCorpID_0Corel-Layer"/>
+          <g transform="matrix(1.00173 0 0 1 36906.4 9640.29)">
+           <text x="-25357.36" y="-3152.15"  class="fil0 fnt0">INSTITUTO FEDERAL DE</text>
+          </g>
+          <g transform="matrix(1.00173 0 0 1 36906.4 13090.8)">
+           <text x="-25357.36" y="-3152.15"  class="fil0 fnt0">EDUCAÇÃO, CIÊNCIA E TECNOLOGIA</text>
+          </g>                  
+          <path class="fil1" d="M6490.29 2748.01c0,155.21 -126.02,280.91 -280.99,280.91l-2323.22 0c-154.99,0 -280.99,-125.7 -280.99,-280.91l0 -2322.76c0,-155.44 126,-280.91 280.99,-280.91l2323.22 0c154.98,0 280.99,125.47 280.99,280.91l0 2322.76z"/>
+          <path class="fil1" d="M9951.58 2748.01c0,155.21 -125.48,280.91 -280.39,280.91l-2323.28 0c-155.22,0 -280.69,-125.7 -280.69,-280.91l0 -2322.76c0,-155.44 125.47,-280.91 280.69,-280.91l2323.28 0c154.91,0 280.39,125.47 280.39,280.91l0 2322.76z"/>
+          <path class="fil1" d="M9951.58 9671.42c0,155.22 -125.48,280.39 -280.39,280.39l-2323.28 0c-155.22,0 -280.69,-125.17 -280.69,-280.39l0 -2322.98c0,-155.51 125.47,-281.21 280.69,-281.21l2323.28 0c154.91,0 280.39,125.7 280.39,281.21l0 2322.98z"/>
+          <path class="fil1" d="M3028.92 6207.46c0,155.52 -126.02,280.69 -280.92,280.69l-2323.28 0c-154.91,0 -280.61,-125.17 -280.61,-280.69l0 -2323.22c0,-154.99 125.7,-280.99 280.61,-280.99l2323.28 0c154.91,0 280.92,126 280.92,280.99l0 2323.22z"/>
+          <path class="fil1" d="M6490.29 6207.46c0,155.52 -126.02,280.69 -280.99,280.69l-2323.22 0c-154.99,0 -280.99,-125.17 -280.99,-280.69l0 -2323.22c0,-154.99 126,-280.99 280.99,-280.99l2323.22 0c154.98,0 280.99,126 280.99,280.99l0 2323.22z"/>
+          <path class="fil1" d="M3028.92 9671.42c0,155.22 -126.02,280.39 -280.92,280.39l-2323.28 0c-154.91,0 -280.61,-125.17 -280.61,-280.39l0 -2322.98c0,-155.51 125.7,-281.21 280.61,-281.21l2323.28 0c154.91,0 280.92,125.7 280.92,281.21l0 2322.98z"/>
+          <path class="fil1" d="M6490.29 9671.42c0,155.22 -126.02,280.39 -280.99,280.39l-2323.22 0c-154.99,0 -280.99,-125.17 -280.99,-280.39l0 -2322.98c0,-155.51 126,-281.21 280.99,-281.21l2323.22 0c154.98,0 280.99,125.7 280.99,281.21l0 2322.98z"/>
+          <path class="fil1" d="M3028.92 13136.48c0,154.91 -126.02,280.69 -280.92,280.69l-2323.28 0c-154.91,0 -280.61,-125.78 -280.61,-280.69l0 -2323.28c0,-154.91 125.7,-280.69 280.61,-280.69l2323.28 0c154.91,0 280.92,125.78 280.92,280.69l0 2323.28z"/>
+          <path class="fil1" d="M6490.29 13136.48c0,154.91 -126.02,280.69 -280.99,280.69l-2323.22 0c-154.99,0 -280.99,-125.78 -280.99,-280.69l0 -2323.28c0,-154.91 126,-280.69 280.99,-280.69l2323.22 0c154.98,0 280.99,125.78 280.99,280.69l0 2323.28z"/>
+          <path class="fil2" d="M3172.87 1586.94c0,876.1 -710.38,1586.47 -1586.47,1586.47 -876.33,0 -1586.4,-710.37 -1586.4,-1586.47 0,-876.1 710.07,-1586.94 1586.4,-1586.94 876.08,0 1586.47,710.84 1586.47,1586.94z"/>
+          <g transform="matrix(1.00173 0 0 1 36910.7 16568.2)">
+           <text x="-25357.36" y="-3152.15"  class="fil3 fnt2">Amazonas</text>
+          </g>
+         </g>
+        </svg>
+               
+        </div>
+
+        <div class="vertical-center center">            
+              <div class="titulo center">                  
+                    <h1>Prof. Alex Monteiro</h1>                  
+              </div>
+              <div class="subtitulo">                
+
+                <script>dataED();</script>
+              </div>         
+        </div>
+    </div>   
+    
+    <div class="page-break center pages" id="page2">        
+          <h2>CRONOGRAMA DE ESTUDO</h2>
+
+          <table id="t01">
+            <tr>
+              <th>Data</th>
+              <th>Templo de Aplicação de Estudo</th> 
+              <th>Prazo para entrega</th>
+              <th>Instruções</th> 
+            </tr>
+            <tr>
+              <td>02/04 - 14/04/2021</td>
+              <td>1º e 2º tempo de Segunda-feira</td>
+              <td>14/04/2021</td>
+              <td>Leitura das Páginas 103 a 104 e realização da atividade 01</td>
+            </tr>
+            <tr>
+              <td>02/04 - 14/04/2021</td>
+              <td>1º e 2º tempo de Segunda-feira</td>
+              <td>14/04/2021</td>
+              <td>Leitura das Páginas 103 a 104 e realização da atividade 01</td>
+            </tr>
+            <tr>
+              <td>02/04 - 14/04/2021</td>
+              <td>1º e 2º tempo de Segunda-feira</td>
+              <td>14/04/2021</td>
+              <td>Leitura das Páginas 103 a 104 e realização da atividade 01</td>
+            </tr>
+          </table>    
+      </div>
+
+  <div class="page-break pages" id="page3">
+
+    <div class="center">
+        <h2 class="center" style="color: #538135;" >SEMANA I</h2>    
+
+        <p class="center">PERÍODO: (10/04 – 14/04/2021)</p>
+        <p class="center">INSTRUÇÕES ACERCA DA ATIVIDADE, DOS MATERIAIS PARA ESTUDO E MATERIAIS COMPLEMENTARES</p>
+    </div>   
+         
+    <p><strong> CONTEÚDO:</strong> Banco de Dados    <br>
+        SUB-UNIDADE: Consulta SQL
+       
+    </p>
+
+    <p><strong>INTRUÇÕES:</strong> Leitura das páginas 103 a 109  e realização da Atividade 01Não alterar o nome do arquivo, apenas acrescentar seu nome no final.Entregar via Mensagem via Whatsapp: (97) 9 8101 1543 até o dia 24/11/2020. </p>
+    <p><strong>OBSERVAÇÃO:</strong>Pode ser feito no caderno e enviado por foto de página inteira.</p>
+       
+    <h3>REFERÊNCIAS</h3>
+    <p> ESTUDO COMPLEMENTAR: xxxxxxxxxx (Pode ser link de pesquisa, slides, livros entre outros. Lembrando que não devem ser obrigatórios e nem assunto principal)
+    </p>   
+
+    <h3>ESTUDO COMPLEMENTAR</h3>
+    <p> ESTUDO COMPLEMENTAR: xxxxxxxxxx (Pode ser link de pesquisa, slides, livros entre outros. Lembrando que não devem ser obrigatórios e nem assunto principal)
+    </p>       
+   
+
+  </div>
+     
+    <div  class="page-break pages" id="page4">
+        <h3>Conteudo </h3>
+        <p>O vídeo fornece uma maneira poderosa de ajudá-lo a provar seu argumento. Ao clicar em Vídeo Online, você pode colar o código de inserção do vídeo que deseja adicionar. Você também pode digitar uma palavra-chave para pesquisar online o vídeo mais adequado ao seu documento. Para dar ao documento uma aparência profissional, o Word fornece designs de cabeçalho, rodapé, folha de rosto e caixa de texto que se complementam entre si. Por exemplo, você pode adicionar uma folha de rosto, um cabeçalho e uma barra lateral correspondentes.</p>
+        <p>Clique em Inserir e escolha os elementos desejados nas diferentes galerias. Temas e estilos também ajudam a manter seu documento coordenado. Quando você clica em Design e escolhe um novo tema, as imagens, gráficos e elementos gráficos SmartArt são alterados para corresponder ao novo tema. Quando você aplica estilos, os títulos são alterados para coincidir com o novo tema. Economize tempo no Word com novos botões que são mostrados no local em que você precisa deles.</p>
+        <p>Para alterar a maneira como uma imagem se ajusta ao seu documento, clique nela e um botão de opções de layout será exibido ao lado. Ao trabalhar em uma tabela, clique no local onde deseja adicionar uma linha ou uma coluna e clique no sinal de adição. A leitura também é mais fácil no novo modo de exibição de Leitura. Você pode recolher partes do documento e colocar o foco no texto desejado. Se for preciso interromper a leitura antes de chegar ao fim dela, o Word lembrará em que ponto você parou - até mesmo em outro dispositivo.</p>
+        <p>O vídeo fornece uma maneira poderosa de ajudá-lo a provar seu argumento. Ao clicar em Vídeo Online, você pode colar o código de inserção do vídeo que deseja adicionar. Você também pode digitar uma palavra-chave para pesquisar online o vídeo mais adequado ao seu documento. Para dar ao documento uma aparência profissional, o Word fornece designs de cabeçalho, rodapé, folha de rosto e caixa de texto que se complementam entre si. Por exemplo, você pode adicionar uma folha de rosto, um cabeçalho e uma barra lateral correspondentes.</p>
+        <p>Clique em Inserir e escolha os elementos desejados nas diferentes galerias. Temas e estilos também ajudam a manter seu documento coordenado. Quando você clica em Design e escolhe um novo tema, as imagens, gráficos e elementos gráficos SmartArt são alterados para corresponder ao novo tema. Quando você aplica estilos, os títulos são alterados para coincidir com o novo tema. Economize tempo no Word com novos botões que são mostrados no local em que você precisa deles.</p>
+    </div>
+
+
+    <div id="Atividade"   class="page-break pages">
+
+        <h2 class="center" >ATIVIDADE  1</h2>
+
+
+        <div style="width: 100%; overflow: hidden;">
+          <div style="width: 70px; float: left;">
+            <label for="matricula">Matrícula: </label><br><br>
+            <label for="name">Nome:</label>      
+          </div>      
+          <div>
+            <input type="number" id="matricula" name="matricula" minlength="10" maxlength="10" size="12"><br><br>
+            <input type="text" id="name" name="name" required minlength="4" maxlength="38" size="40">
+          </div>
+        </div>
+    
+
+            <div id="questionario">
+                <div class="questao">          
+                  <label for="questao1"><strong> Questão 1</strong> - Como é divido do Processador?</label><br/>
+                  <span id=questao1 class="textarea" role="textbox" contenteditable></span>
+                </div>
+                
+                <div class="questao">          
+                  <label for="questao2"><strong> Questão 2</strong> - Como é divido do Processador?</label><br/>
+                  <span id=questao2 class="textarea" role="textbox" contenteditable></span></p>
+                </div>
+
+                <div class="questao">          
+                  <label for="questao3"><strong>Questão  3</strong> - Qual a funcao do processador?</label><br/>
+                  <span id=questao3 class="textarea" role="textbox" contenteditable></span></p>
+                </div>
+
+                <div class="questao">
+                      <p><strong>Questão  4</strong> - Qual a funcao do processador?</p>
+                            <input type="radio" id="age1" name="age" value="30">
+                            <label for="age1">0 - 30</label><br>
+                            <input type="radio" id="age2" name="age" value="60">
+                            <label for="age2">31 - 60</label><br>  
+                            <input type="radio" id="age3" name="age" value="100">
+                            <label for="age3">61 - 100</label><br>
+                            <input type="radio" id="age4" name="age" value="100">
+                            <label for="age4">61 - 100</label><br>
+                            <input type="radio" id="age5" name="age" value="100">
+                            <label for="age5">61 - 100</label><br>
+                </div>
+        
+                <div style="padding-top: 2%;">                  
+                  <button class="button button1" onclick="salvar()">Salvar em JSON</button>
+                  <button class="button button2" onclick="CriaPDF()">Salvar em PDF</button>                  
+                </div>
+
+          </div>
+    </div>
+
+
+
+<script type="text/javascript">
+
+var _global = typeof window === 'object' && window.window === window
+  ? window : typeof self === 'object' && self.self === self
+  ? self : typeof global === 'object' && global.global === global
+  ? global
+  : this
+
+function bom (blob, opts) {
+  if (typeof opts === 'undefined') opts = { autoBom: false }
+  else if (typeof opts !== 'object') {
+    console.warn('Deprecated: Expected third argument to be a object')
+    opts = { autoBom: !opts }
+  }
+
+  // prepend BOM for UTF-8 XML and text/* types (including HTML)
+  // note: your browser will automatically convert UTF-16 U+FEFF to EF BB BF
+  if (opts.autoBom && /^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(blob.type)) {
+    return new Blob([String.fromCharCode(0xFEFF), blob], { type: blob.type })
+  }
+  return blob
+}
+
+function download (url, name, opts) {
+  var xhr = new XMLHttpRequest()
+  xhr.open('GET', url)
+  xhr.responseType = 'blob'
+  xhr.onload = function () {
+    saveAs(xhr.response, name, opts)
+  }
+  xhr.onerror = function () {
+    console.error('could not download file')
+  }
+  xhr.send()
+}
+
+function corsEnabled (url) {
+  var xhr = new XMLHttpRequest()
+  // use sync to avoid popup blocker
+  xhr.open('HEAD', url, false)
+  try {
+    xhr.send()
+  } catch (e) {}
+  return xhr.status >= 200 && xhr.status <= 299
+}
+
+// `a.click()` doesn't work for all browsers (#465)
+function click (node) {
+  try {
+    node.dispatchEvent(new MouseEvent('click'))
+  } catch (e) {
+    var evt = document.createEvent('MouseEvents')
+    evt.initMouseEvent('click', true, true, window, 0, 0, 0, 80,
+                          20, false, false, false, false, 0, null)
+    node.dispatchEvent(evt)
+  }
+}
+
+// Detect WebView inside a native macOS app by ruling out all browsers
+// We just need to check for 'Safari' because all other browsers (besides Firefox) include that too
+// https://www.whatismybrowser.com/guides/the-latest-user-agent/macos
+var isMacOSWebView = /Macintosh/.test(navigator.userAgent) && /AppleWebKit/.test(navigator.userAgent) && !/Safari/.test(navigator.userAgent)
+
+var saveAs = _global.saveAs || (
+  // probably in some web worker
+  (typeof window !== 'object' || window !== _global)
+    ? function saveAs () { /* noop */ }
+
+  // Use download attribute first if possible (#193 Lumia mobile) unless this is a macOS WebView
+  : ('download' in HTMLAnchorElement.prototype && !isMacOSWebView)
+  ? function saveAs (blob, name, opts) {
+    var URL = _global.URL || _global.webkitURL
+    var a = document.createElement('a')
+    name = name || blob.name || 'download'
+
+    a.download = name
+    a.rel = 'noopener' // tabnabbing
+
+    // TODO: detect chrome extensions & packaged apps
+    // a.target = '_blank'
+
+    if (typeof blob === 'string') {
+      // Support regular links
+      a.href = blob
+      if (a.origin !== location.origin) {
+        corsEnabled(a.href)
+          ? download(blob, name, opts)
+          : click(a, a.target = '_blank')
+      } else {
+        click(a)
+      }
+    } else {
+      // Support blobs
+      a.href = URL.createObjectURL(blob)
+      setTimeout(function () { URL.revokeObjectURL(a.href) }, 4E4) // 40s
+      setTimeout(function () { click(a) }, 0)
+    }
+  }
+
+  // Use msSaveOrOpenBlob as a second approach
+  : 'msSaveOrOpenBlob' in navigator
+  ? function saveAs (blob, name, opts) {
+    name = name || blob.name || 'download'
+
+    if (typeof blob === 'string') {
+      if (corsEnabled(blob)) {
+        download(blob, name, opts)
+      } else {
+        var a = document.createElement('a')
+        a.href = blob
+        a.target = '_blank'
+        setTimeout(function () { click(a) })
+      }
+    } else {
+      navigator.msSaveOrOpenBlob(bom(blob, opts), name)
+    }
+  }
+
+  // Fallback to using FileReader and a popup
+  : function saveAs (blob, name, opts, popup) {
+    // Open a popup immediately do go around popup blocker
+    // Mostly only available on user interaction and the fileReader is async so...
+    popup = popup || open('', '_blank')
+    if (popup) {
+      popup.document.title =
+      popup.document.body.innerText = 'downloading...'
+    }
+
+    if (typeof blob === 'string') return download(blob, name, opts)
+
+    var force = blob.type === 'application/octet-stream'
+    var isSafari = /constructor/i.test(_global.HTMLElement) || _global.safari
+    var isChromeIOS = /CriOS\/[\d]+/.test(navigator.userAgent)
+
+    if ((isChromeIOS || (force && isSafari) || isMacOSWebView) && typeof FileReader !== 'undefined') {
+      // Safari doesn't allow downloading of blob URLs
+      var reader = new FileReader()
+      reader.onloadend = function () {
+        var url = reader.result
+        url = isChromeIOS ? url : url.replace(/^data:[^;]*;/, 'data:attachment/file;')
+        if (popup) popup.location.href = url
+        else location = url
+        popup = null // reverse-tabnabbing #460
+      }
+      reader.readAsDataURL(blob)
+    } else {
+      var URL = _global.URL || _global.webkitURL
+      var url = URL.createObjectURL(blob)
+      if (popup) popup.location = url
+      else location.href = url
+      popup = null // reverse-tabnabbing #460
+      setTimeout(function () { URL.revokeObjectURL(url) }, 4E4) // 40s
+    }
+  }
+)
+
+_global.saveAs = saveAs.saveAs = saveAs
+
+if (typeof module !== 'undefined') {
+  module.exports = saveAs;
+}
+    
+
+ function dataAtualFormatada(){
+    var data = new Date(),
+        dia  = data.getDate().toString(),
+        diaF = (dia.length == 1) ? '0'+dia : dia,
+        mes  = (data.getMonth()+1).toString(), //+1 pois no getMonth Janeiro começa com zero.
+        mesF = (mes.length == 1) ? '0'+mes : mes,
+        anoF = data.getFullYear();
+    return diaF+"/"+mesF+"/"+anoF;
+}
+
+function salvar() {
+      let today = dataAtualFormatada();   
+      let  nameFile = edirigido["turma"] + "-" + document.getElementById("matricula").value + "-" + today + ".json";
+      let questoes = document.getElementsByClassName("questao");      
+
+      edirigido["data"] = today;
+                
+       for(i= 0 ; i < questoes.length; i++){
+             edirigido[questoes[i].childNodes[4].id] = questoes[i].childNodes[4].innerText;
+       }
+
+       let texto = JSON.stringify(edirigido);
+       console.log(edirigido);
+
+      let titulo = "teste";
+      let blob = new Blob([texto], { type: "text/plain;charset=utf-8" });
+      saveAs(blob,nameFile);
+   }
+
+
+   function CriaPDF() {
+        var minhaTabela = document.getElementById('Atividade').innerHTML;        
+       
+        var  style = "<style>";
+        style = style  + document.getElementsByTagName('style')[0].innerHTML;
+        console.log(style);
+        style = style + "html body {margin: 10%;}";        
+        style = style + "</style>";
+//        CRIA UM OBJETO WINDOW
+        var win = window.open('', '', 'height=3509,width=2480');
+        win.document.write('<html><head>');
+        win.document.write('<title>Empregados</title>');   // <title> CABEÇALHO DO PDF.
+        win.document.write(style);                                     // INCLUI UM ESTILO NA TAB HEAD
+        win.document.write('</head>');
+        win.document.write('<body>');
+        win.document.write(minhaTabela);                          // O CONTEUDO DA TABELA DENTRO DA TAG BODY
+        win.document.write('</body></html>');
+        win.document.close(); 	                                         // FECHA A JANELA
+        win.print();                                                            // IMPRIME O CONTEUDO
+    }
+   
+
+    function openAba(evt, AbaName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(AbaName).style.display = "block";
+          evt.currentTarget.className += " active";
+    }
+    
+
+</script>
+</body>
+</html>
